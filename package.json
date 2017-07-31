@@ -1,0 +1,25 @@
+{
+  "name": "learn-d3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "node ./scripts/clean",
+    "setup": "node ./scripts/setup",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prebuild": "npm run clean && npm run setup",
+    "build": "webpack --config ./config/webpack.config.js",
+    "prestart": "npm run prebuild",
+    "start": "webpack-dev-server --config ./config/webpack.config.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "d3": "4.10.0"
+  },
+  "devDependencies": {
+    "shelljs": "0.7.8",
+    "webpack": "3.4.1",
+    "webpack-dev-server": "2.6.1"
+  }
+}
